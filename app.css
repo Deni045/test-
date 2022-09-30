@@ -1,0 +1,17 @@
+let code = 'html'
+
+switch(code){
+  case('html') : 
+  console.log('html');
+  break;
+  case('css') : 
+  console.log('css');
+  break;
+  case('js') : 
+  console.log('js');
+  break;
+  case('react') : 
+  console.log('react');
+
+
+}
