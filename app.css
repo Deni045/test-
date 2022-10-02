@@ -1,17 +1,71 @@
-let code = 'html'
+let E = '28.02.1999'; 
+let pi  = 3.14;
+
+console.log(E, pi)
+
+const F = 101;
+
+
+
+console.log(F)
+
+let name = prompt('name')
+let address = prompt('address')
+let phone_number = prompt('phone number')
+
+console.log(`student ${name}, address ${address}, phone number ${phone_number}.`)
+
+
+let rub = prompt('rubel') / 58;
+
+console.log(rub)
+
+let a = 5, b = 10, c;
+  c = a + b;
+  console.log(c);
+
+  console.log('start')
+
+  const D = 6;
+
+if(D < 10){
+  console.log('constant less than 10') 
+} else{
+  console.log()
+}
+ 
+  console.log('end')
+
+let nameData = 'borger';
+let passwordData = "1234";
+
+let Name = prompt('login?')
+let password = prompt('password?')
+
+if(nameData === Name && passwordData === password){
+    console.log('welcome');
+} else{
+  console.log('error')
+}
+
+let code = 'js'
 
 switch(code){
   case('html') : 
   console.log('html');
   break;
+
   case('css') : 
   console.log('css');
   break;
+
   case('js') : 
   console.log('js');
   break;
+
   case('react') : 
   console.log('react');
 
-
+  default:
+    console.log('default')
 }
