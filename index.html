@@ -11,36 +11,53 @@
 
 <script>
 
-function world(){
-  alert('Hello world')
-}
-
-function java(){
-  console.log('JavaScript')
-}
-
-function constants(F){
-  if( F < 10){
-    console.log('constant less than 10');
-  } else {
-    console.log('constant not less than 10')
+  let name = 'Deni';//string
+  const age = 16; //number
+  if(age <  15){
+    console.log('accsess prohibited')
+  }else{
+    console.log(`hello ${name}`)
   }
-}
 
-let G = 'borger';
-
-function lor(){
-  if( G === 'lorem'){
-    console.log('you have error in the text')
-  } else{
-    console.log('varibale content borger')
+  function veiwMoney(){
+    console.log('вот вам 10$')
   }
+
+  function getMoney(cash$){
+    return `вот вам ${cash$}$` 
+  }
+
+  function square(num){
+    return num * num
+  }
+  
+  function cal(num1, num2, num3){
+    if(num1 > num2 && num1 > num3){
+      return num1
+    }
+    else if(num2 > num1 && num2 > num3){
+        return num2
+    } return num3
+  }
+
+
+
+
+
+  function oed(a, b){
+    if (a, b % 2 === 0) {
+        return a, b
+    } else {
+      return a + b
+    }  
 }
 
-constants(5)
-world()
-java()
-lor()
+  veiwMoney()
+  console.log(getMoney(999)) 
+  console.log(square(9))
+  console.log(cal(2,9,3))
+  
+  console.log(oed(4,5))
 
 </script>
 

@@ -69,3 +69,34 @@ switch(code){
   default:
     console.log('default')
 }
+
+function world(){
+  alert('Hello world')
+}
+
+function java(){
+  console.log('JavaScript')
+}
+
+function constants(F){
+  if( F < 10){
+    console.log('constant less than 10');
+  } else {
+    console.log('constant not less than 10')
+  }
+}
+
+let G = 'borger';
+
+function lor(){
+  if( G === 'lorem'){
+    console.log('you have error in the text')
+  } else{
+    console.log('varibale content borger')
+  }
+}
+
+constants(5)
+world()
+java()
+lor()
