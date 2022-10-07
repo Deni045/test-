@@ -100,3 +100,59 @@ constants(5)
 world()
 java()
 lor()
+
+let name = 'Deni';//string
+const age = 16; //number
+if(age <  15){
+  console.log('accsess prohibited')
+}else{
+  console.log(`hello ${name}`)
+}
+
+function veiwMoney(){
+  console.log('вот вам 10$')
+}
+
+function getMoney(cash$){
+  return `вот вам ${cash$}$` 
+}
+
+function square(num){
+  return num * num
+}
+
+function cal(num1, num2, num3){
+  if(num1 > num2 && num1 > num3){
+    return num1
+  }
+  else if(num2 > num1 && num2 > num3){
+      return num2
+  } return num3
+}
+
+
+function dis (a,b,c){
+return b**2 - 4 * (a * c)
+}
+
+
+
+function oed(e, f){
+  if(e % 2 === 0 && f % 2 === 0){
+    return e * f
+    } else if (a % 2 !== 0 && f % 2 !== 0){
+    return e + f
+    } else if(a % 2 !== 0){
+       return e
+    } else {
+     return f
+  }
+}
+
+
+veiwMoney()
+console.log(getMoney(999)) 
+console.log(square(9))
+console.log(cal(2,9,3))
+console.log(dis(10,20,4))
+console.log(oed())
