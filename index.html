@@ -11,87 +11,36 @@
 
 <script>
 
-  let Each = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+const cities = [ {name: 'Moscow', population: 12506468},{name: 'Saint Petersburg', population: 5351935},{name: 'Novosibirsk', population: 1612833},{name: 'Kaliningrad', population: 482443}, {name: 'Kaluga', population: 336726}];
 
-  Each.forEach(function(item){
-    if ( item % 2 !== 0){
-    console.log(item) ;
-    }
-  })
+cities.unshift({name: 'Berlin', population: 3571000})
+cities.push({name: 'Hamburg', population: 1788000})
 
-  let text = [ 'lorem ipsum', 'javascript', 'php', 'css', 'react', 'git', 'html', 'mysql' ]
-  
-  let text2 = text.filter(function(item, key){
-    return item.length >= 4
-  })
-
-  console.log(text2);
-  
-
-  let tall = [1, -3, 5, 6, -7, 8, 9, -11]
-
-  let tall2 = tall.filter(function(item, key){
-    return item < -0
-  })
-
-  console.log(tall2)
+cities.forEach(function(item){
+  console.log('city:', item.name, 'population:', item.population); 
+})
 
 
-  let zahlen = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+cities2 = cities.filter(function(item){
+  return item.population > 1000000
+})
 
-  zahlen.forEach(function(item){
-    if ( item % 2 == 0){
-      console.log(item);
-    }
-  })
+console.log(cities2);
 
+cities3 = cities.map(function(item){
+ return Math.round(item.population * (1 + 0.015)) 
+})
 
-  let wasser = [ 'lorem ipsum', 'javascript', 'php', 'css', 'react', 'git', 'html', 'mysql']
+console.log(cities3)
 
-  let wasser2 = wasser.map(function(item, key){
-    if ( 3 < item.length ){
-      console.log(item)
-    }
-  })
+cities4 = cities3.reduce(function(item, sum){
+  return sum + item
+},0);
 
-  
-  let square = [5,6,7,8,9]
+console.log('all cities combined', cities4)
 
-  square.forEach(function(item, key){
-    console.log(item * item)
-  })
-
-  
-  let svar = [{a: 10, b: 5}, {a: 20, b: 22}, {a: 131, b:55}]
-
-  let svar2 = svar.map(function(item, key){
-    return item.a + item.b
-  })
-
-  console.log(svar2)
-
-
-  let minus = [-13, 0, 12, 1662, -0.32, -102, -2]
-
-  let minus2 = minus.filter(function(item, key){
-    return item < -0
-  })
-
-  minus3 = minus2.reduce(function(sum, current){
-    return sum + current
-  }, 0);
-
-  console.log(minus3)
-
-
-  let yes = [ {x: 10, y: "lorem"}, {x: 21, y: "lorem"}, {x: -17, y: "lorem"}, {x: 156, y : "lorem"}];
-
-  yes2 = yes.reduce(function(sum, item){
-    return sum + item.x
-  }, 0);
-
-  console.log(yes2)
-
+// 4. After a while, the population in all cities increased by 1.5 times. Create a new array that will reflect this.
+// 5. Calculate the number of population in all cities after its increase.
 </script>
 
 </body>
