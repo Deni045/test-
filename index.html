@@ -17,7 +17,7 @@ cities.unshift({name: 'Berlin', population: 3571000})
 cities.push({name: 'Hamburg', population: 1788000})
 
 cities.forEach(function(item){
-  console.log('city:', item.name, 'population:', item.population); 
+  console.log(`city: ${item.name}, population: ${item.population}`); 
 })
 
 
@@ -28,7 +28,7 @@ cities2 = cities.filter(function(item){
 console.log(cities2);
 
 cities3 = cities.map(function(item){
- return Math.round(item.population * (1 + 0.015)) 
+ return item.population * 1.5 
 })
 
 console.log(cities3)
