@@ -11,36 +11,44 @@
 
 <script>
 
-const cities = [ {name: 'Moscow', population: 12506468},{name: 'Saint Petersburg', population: 5351935},{name: 'Novosibirsk', population: 1612833},{name: 'Kaliningrad', population: 482443}, {name: 'Kaluga', population: 336726}];
+let arr_1 = [101, 202, 303, 404, 505]; 
+let arr_2 = [606, 707, 808, 909];
+let superArr = arr_1.concat(arr_2);
 
-cities.unshift({name: 'Berlin', population: 3571000})
-cities.push({name: 'Hamburg', population: 1788000})
+console.log(Math.min(...superArr));
 
-cities.forEach(function(item){
-  console.log(`city: ${item.name}, population: ${item.population}`); 
-})
+let obj = {width: 300, height: 550}
 
+let obj2 ={...obj}
 
-cities2 = cities.filter(function(item){
-  return item.population > 1000000
-})
+console.log(obj);
+console.log(obj2);
 
-console.log(cities2);
+let area = {...obj, area(){
+  return obj.width + obj.height
+}}
 
-cities3 = cities.map(function(item){
- return item.population * 1.5 
-})
+console.log(area.area())
 
-console.log(cities3)
+//  4 Create a function that takes an arbitrary number of parameters and returns their sum.
+function sum(...a){
+  let result = a.reduce(function(item, sum){
+    return sum + item
+  })
+  console.log(result)
+}
 
-cities4 = cities3.reduce(function(item, sum){
-  return sum + item
-},0);
-
-console.log('all cities combined', cities4)
-
-// 4. After a while, the population in all cities increased by 1.5 times. Create a new array that will reflect this.
-// 5. Calculate the number of population in all cities after its increase.
+let num = 1; 
+while (num < 3, num++) {
+console.log(`4ucno: ${num}`);
+  if (num === 5)break
+}
+ 
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while (i < 11);
 </script>
 
 </body>
