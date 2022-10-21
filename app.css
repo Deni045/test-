@@ -329,3 +329,45 @@ cities4 = cities3.reduce(function(item, sum){
 },0);
 
 console.log('all cities combined', cities4)
+
+
+
+
+let arr_1 = [101, 202, 303, 404, 505]; 
+let arr_2 = [606, 707, 808, 909];
+let superArr = [...arr_1, ...arr_2];
+console.log(superArr)
+console.log(Math.min(...superArr));
+
+let obj = {width: 300, height: 550}
+
+let obj2 ={...obj}
+
+console.log(obj);
+console.log(obj2);
+
+let area = {...obj, area(){
+  return obj.width + obj.height
+}}
+
+console.log(area.area())
+
+
+function sum(...a){
+  let result = a.reduce(function(item, sum){
+    return sum + item
+  })
+  console.log(result)
+}
+
+let num = 1; 
+while (num < 3, num++) {
+console.log(`4ucno: ${num}`);
+  if (num === 5)break
+}
+ 
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while (i < 11);

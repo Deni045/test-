@@ -5,50 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js</title>
+    <style>
+      .bur{
+        background-color: aquamarine;
+      }
+    </style>
 </head>
 <body>
-    
+  <ol id="ol">
+    <li>lorem 1</li>
+    <li>lorem 2</li>
+    <li>lorem 3</li>
+    <li class="main">lorem 4</li>
+  </ol>
+
+
 
 <script>
 
-let arr_1 = [101, 202, 303, 404, 505]; 
-let arr_2 = [606, 707, 808, 909];
-let superArr = [...arr_1, ...arr_2];
-console.log(superArr)
-console.log(Math.min(...superArr));
+let ol = document.getElementById('ol');
 
-let obj = {width: 300, height: 550}
+let li = document.createElement('li');
 
-let obj2 ={...obj}
+li.append('orem');
+ol.append(li)
+console.log(li);
 
-console.log(obj);
-console.log(obj2);
+ol.append('lorem');
 
-let area = {...obj, area(){
-  return obj.width + obj.height
-}}
+li.classList.add('bur')
+li.classList.toggle('bur')
 
-console.log(area.area())
+ol.before('before');
+ol.after('after');
+
+let a = li.classList.contains('bur')
+
+console.log(document.body.innerHTML);
 
 
-function sum(...a){
-  let result = a.reduce(function(item, sum){
-    return sum + item
-  })
-  console.log(result)
-}
-
-let num = 1; 
-while (num < 3, num++) {
-console.log(`4ucno: ${num}`);
-  if (num === 5)break
-}
- 
-let i = 1;
-do {
-  console.log(i);
-  i++;
-} while (i < 11);
 </script>
 
 </body>
