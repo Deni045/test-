@@ -5,35 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js</title>
-    <style>
-      .bur{
-        background-color: aquamarine;
-      }
-    </style>
+    <link rel="stylesheet" href="./app.css">
+
 </head>
 <body>
- 
-<ul id="ul"></ul>
+  <div class="main">
+
+      <div id="big" class="big">
+        <div class="title">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non perferendis deleniti nihil dolores.
+      </div>
+    </div>
+    
+     <div class="little">
+       <div id="item-1" class="little-items">
+          <div class="little-img">
+            <img src="./img/lamp.png" alt="">
+          </div>
+          <div class="little-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod esse ea ipsa nihil id aut enim ex earum neque eos.
+          </div>
+       </div>
+      
+       <div id="item-2" class="little-items">
+          <div class="little-img">
+            <img src="./img/Dwayne-Johnson.webp" alt="">
+          </div>
+          <div class="little-title">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet fuga, in qui accusantium facilis magni at voluptas sunt error impedit.
+          </div>
+       </div>
+      
+       <div id="item-3" class="little-items">
+          <div class="little-img">
+            <img src="./img/peach-tree.jpg" alt="">
+          </div>
+          <div class="little-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro iure expedita consectetur alias explicabo!
+         </div>
+       </div>
+      
+     </div>
+  </div>
 
 <script>
 
-let ul = document.getElementById('ul');
+let item_1 = document.getElementById('item-1')
+let item_2 = document.getElementById('item-2')
+let item_3 = document.getElementById('item-3')
 
-let li = document.createElement('li');
-let li2 = document.createElement('li');
-let li3 = document.createElement('li');
-let li4 = document.createElement('li');
+let big = document.getElementById('big')
 
-ul.append(li);
-ul.append(li2);
-ul.append(li3);
-ul.append(li4);
+item_1.onclick = active;
+item_2.onclick = active;
+item_3.onclick = active;
 
-li.innerHTML = 'lorem'
-li2.innerHTML = 'lorem'
-li3.innerHTML = 'lorem'
-li4.innerHTML = 'lorem'
+item_1.addEventListener('click', toggle)
+item_2.addEventListener('click', toggle)
+item_3.addEventListener('click', toggle)
 
+
+
+function active(){
+ item_1.classList.remove('active')  
+ item_2.classList.remove('active')
+ item_3.classList.remove('active')     
+  
+  
+  this.classList.add('active')
+}
+
+function toggle(){
+  let src = this.firstElementChild.firstElementChild.src
+  let text = this.lastElementChild.innerHTML
+
+  big.style.backgroundImage = `url(${src})`
+  big.firstElementChild.innerHTML = text
+}
 </script>
 
 </body>

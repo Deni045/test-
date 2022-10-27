@@ -1,0 +1,373 @@
+
+let E = '28.02.1999'; 
+let pi  = 3.14;
+
+console.log(E, pi)
+
+const F = 101;
+
+
+
+console.log(F)
+
+let name = prompt('name')
+let address = prompt('address')
+let phone_number = prompt('phone number')
+
+console.log(`student ${name}, address ${address}, phone number ${phone_number}.`)
+
+
+let rub = prompt('rubel') / 58;
+
+console.log(rub)
+
+let a = 5, b = 10, c;
+  c = a + b;
+  console.log(c);
+
+  console.log('start')
+
+  const D = 6;
+
+if(D < 10){
+  console.log('constant less than 10') 
+} else{
+  console.log()
+}
+ 
+  console.log('end')
+
+let nameData = 'borger';
+let passwordData = "1234";
+
+let Name = prompt('login?')
+let password = prompt('password?')
+
+if(nameData === Name && passwordData === password){
+    console.log('welcome');
+} else{
+  console.log('error')
+}
+
+let code = 'js'
+
+switch(code){
+  case('html') : 
+  console.log('html');
+  break;
+
+  case('css') : 
+  console.log('css');
+  break;
+
+  case('js') : 
+  console.log('js');
+  break;
+
+  case('react') : 
+  console.log('react');
+
+  default:
+    console.log('default')
+}
+
+function world(){
+  alert('Hello world')
+}
+
+function java(){
+  console.log('JavaScript')
+}
+
+function constants(F){
+  if( F < 10){
+    console.log('constant less than 10');
+  } else {
+    console.log('constant not less than 10')
+  }
+}
+
+let G = 'borger';
+
+function lor(){
+  if( G === 'lorem'){
+    console.log('you have error in the text')
+  } else{
+    console.log('varibale content borger')
+  }
+}
+
+constants(5)
+world()
+java()
+lor()
+
+let name = 'Deni';//string
+const age = 16; //number
+if(age <  15){
+  console.log('accsess prohibited')
+}else{
+  console.log(`hello ${name}`)
+}
+
+function veiwMoney(){
+  console.log('вот вам 10$')
+}
+
+function getMoney(cash$){
+  return `вот вам ${cash$}$` 
+}
+
+function square(num){
+  return num * num
+}
+
+function cal(num1, num2, num3){
+  if(num1 > num2 && num1 > num3){
+    return num1
+  }
+  else if(num2 > num1 && num2 > num3){
+      return num2
+  } return num3
+}
+
+
+function dis (a,b,c){
+return b**2 - 4 * (a * c)
+}
+
+
+
+function oed(e, f){
+  if(e % 2 === 0 && f % 2 === 0){
+    return e * f
+    } else if (a % 2 !== 0 && f % 2 !== 0){
+    return e + f
+    } else if(a % 2 !== 0){
+       return e
+    } else {
+     return f
+  }
+}
+
+
+veiwMoney()
+console.log(getMoney(999)) 
+console.log(square(9))
+console.log(cal(2,9,3))
+console.log(dis(10,20,4))
+console.log(oed())
+
+let person = {
+  first_name: 'Fritz',
+  last_name: 'Nachtnebel',
+  age: '34',
+  height: '194cm',
+  money: '-1000$',
+  login: {
+    password: '12345',
+  }
+  
+  }
+
+person.address = 'Germany, berlin, Pasiser Platz';
+
+let pass = '12346';
+
+function passw(){
+  if(pass === person.login.password){
+    return `welcome ${person.first_name} ${person.last_name}`
+  } else {
+    return `The specified password ${pass} is not correct, try again.`
+  }
+}
+
+console.log(person)
+console.log(passw())
+
+let arr = ['lorem', 123, true,'ipsum',]
+
+console.log(arr.length);
+console.log(arr[arr.length - 1]);
+console.log(arr[0]);
+
+arr.unshift(1,2,3,);
+arr.shift();
+arr.splice(4,5,);
+
+console.log(arr);
+
+let em = [];
+
+em.push(1,'zwei',3,false,'fem',);
+
+console.log(em);
+
+
+
+let number = [1,3,5,7,9] 
+
+number[0] = 2 
+number[1] = 4 
+number[2] = 6 
+number[3] = 8
+number[4] = 10
+
+console.log(number)
+
+number.splice(1,3)
+
+
+
+let Each = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+
+Each.forEach(function(item){
+  if ( item % 2 !== 0){
+  console.log(item) ;
+  }
+})
+
+let text = [ 'lorem ipsum', 'javascript', 'php', 'css', 'react', 'git', 'html', 'mysql' ]
+
+let text2 = text.filter(function(item, key){
+  return item.length >= 4
+})
+
+console.log(text2);
+
+
+let tall = [1, -3, 5, 6, -7, 8, 9, -11]
+
+let tall2 = tall.filter(function(item, key){
+  return item < -0
+})
+
+console.log(tall2)
+
+
+let zahlen = [10, 2762, 0.42, 192, 3, 28, 1125, 2018, 34, 66, 100]
+
+zahlen.forEach(function(item){
+  if ( item % 2 == 0){
+    console.log(item);
+  }
+})
+
+
+let wasser = [ 'lorem ipsum', 'javascript', 'php', 'css', 'react', 'git', 'html', 'mysql']
+
+let wasser2 = wasser.map(function(item, key){
+  if ( 3 < item.length ){
+    console.log(item)
+  }
+})
+
+
+let square = [5,6,7,8,9]
+
+square.forEach(function(item, key){
+  console.log(item * item)
+})
+
+
+let svar = [{a: 10, b: 5}, {a: 20, b: 22}, {a: 131, b:55}]
+
+let svar2 = svar.map(function(item, key){
+  return item.a + item.b
+})
+
+console.log(svar2)
+
+
+let minus = [-13, 0, 12, 1662, -0.32, -102, -2]
+
+let minus2 = minus.filter(function(item, key){
+  return item < -0
+})
+
+minus3 = minus2.reduce(function(sum, current){
+  return sum + current
+}, 0);
+
+console.log(minus3)
+
+
+let yes = [ {x: 10, y: "lorem"}, {x: 21, y: "lorem"}, {x: -17, y: "lorem"}, {x: 156, y : "lorem"}];
+
+yes2 = yes.reduce(function(sum, item){
+  return sum + item.x
+}, 0);
+
+console.log(yes2)
+
+
+
+const cities = [ {name: 'Moscow', population: 12506468},{name: 'Saint Petersburg', population: 5351935},{name: 'Novosibirsk', population: 1612833},{name: 'Kaliningrad', population: 482443}, {name: 'Kaluga', population: 336726}];
+
+cities.unshift({name: 'Berlin', population: 3571000})
+cities.push({name: 'Hamburg', population: 1788000})
+
+cities.forEach(function(item){
+  console.log(`city: ${item.name}, population: ${item.population}`); 
+})
+
+
+cities2 = cities.filter(function(item){
+  return item.population > 1000000
+})
+
+console.log(cities2);
+
+cities3 = cities.map(function(item){
+ return item.population * 1.5 
+})
+
+console.log(cities3)
+
+cities4 = cities3.reduce(function(item, sum){
+  return sum + item
+},0);
+
+console.log('all cities combined', cities4)
+
+
+
+
+let arr_1 = [101, 202, 303, 404, 505]; 
+let arr_2 = [606, 707, 808, 909];
+let superArr = [...arr_1, ...arr_2];
+console.log(superArr)
+console.log(Math.min(...superArr));
+
+let obj = {width: 300, height: 550}
+
+let obj2 ={...obj}
+
+console.log(obj);
+console.log(obj2);
+
+let area = {...obj, area(){
+  return obj.width + obj.height
+}}
+
+console.log(area.area())
+
+
+function sum(...a){
+  let result = a.reduce(function(item, sum){
+    return sum + item
+  })
+  console.log(result)
+}
+
+let num = 1; 
+while (num < 3, num++) {
+console.log(`4ucno: ${num}`);
+  if (num === 5)break
+}
+ 
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while (i < 11);
